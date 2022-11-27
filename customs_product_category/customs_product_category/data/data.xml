@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="type_project" model="opportunity.type">
+            <field name="name">Project</field>
+        </record>
+
+        <record id="type_supply_only" model="opportunity.type">
+            <field name="name">Supply Only</field>
+        </record>
+
+        <record id="type_services" model="opportunity.type">
+            <field name="name">Services</field>
+        </record>
+    </data>
+</odoo>

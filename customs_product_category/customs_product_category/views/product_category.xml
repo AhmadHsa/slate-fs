@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+<!--        <record id="view_category_form_inh" model="ir.ui.view">-->
+<!--            <field name="name">view.category.form.inh</field>-->
+<!--            <field name="model">product.category</field>-->
+<!--            <field name="inherit_id" ref="product.product_category_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+
+<!--                <xpath expr="//field[@name='parent_id']" position="after">-->
+<!--                    <group>-->
+<!--                        <field name="is_accs_category"/>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

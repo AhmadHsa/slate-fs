@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_product_template_form_inherit" model="ir.ui.view">
+            <field name="name">product.template.product.form</field>
+            <field name="model">product.template</field>
+            <field name="priority" eval="8"/>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Packeg Tools" name="bom">
+                        <group>
+                            <field name="excel_file"/>
+                        </group>
+                        <group>
+                            <button name="import_from_excel" class="btn btn-primary" type="object"
+                                    string="Import From File"/>
+                        </group>
+                        <group>
+                            <field name="bom_ids" widget="one2many" nolabel="1">
+                                <tree name="bom_tree" string="BOM" editable="bottom">
+                                    <field name="product_template_id" invisible="1"/>
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="quantity"/>
+                                    <field name="cost"/>
+                                    <field name="note"/>
+                                    <field name="sub_total"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                            <field name="amount_untaxed" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                    </page>
+
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>
